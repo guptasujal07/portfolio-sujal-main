@@ -84,7 +84,7 @@ const projects = [
     github: "https://github.com/guptasujal07/college-anonymous-main",
   },
   {
-    title: "Blog App",
+    title: "Job App",
     tech: [
       "React.js",
       "Node.js",
@@ -95,15 +95,15 @@ const projects = [
       "Cloudinary",
     ],
     desc: [
-      "Developed a web application for blogging with a polished UI.",
-      "Integrated OTP & Google authentication for secure login.",
-      "Implemented a comment system to enhance user interaction.",
-      "Optimized post fetching and ensured full responsiveness.",
+      "Developed a job portal web application with role-based access for recruiters and job seekers.",
+      "Implemented job posting & application workflows to simplify the hiring process.",
+      "Integrated advanced search and filters for quick job discovery.",
+      "Designed a responsive UI for smooth experience across devices.",
     ],
     img: "p3.png",
-    alt: "Blog App Project Image",
-    live: "https://next-blogs-u170.onrender.com",
-    github: "https://github.com/guptasujal07/your-blogs-main",
+    alt: "Job App Project Image",
+    live: "https://talenthivex.vercel.app/",
+    github: "https://github.com/guptasujal07/Jobportal",
   },
 ];
 
