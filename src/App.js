@@ -307,7 +307,7 @@ function App() {
             />
           ))}
         </div>
-        
+
         <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 px-6 relative z-10">
           <div className="flex-shrink-0">
             <div className="profile-image pulse-ring">
@@ -378,8 +378,8 @@ function App() {
       </section>
 
       {/* Education Section */}
-      <section 
-        id="about" 
+      <section
+        id="about"
         ref={setSectionRef('about')}
         className={`container mx-auto px-6 py-20 ${isSectionVisible('about') ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
       >
@@ -389,7 +389,7 @@ function App() {
         <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto text-reveal" style={{ animationDelay: "0.2s" }}>
           Building a strong foundation for innovative development
         </p>
-        
+
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="glass rounded-3xl shadow-xl p-8 border border-blue-200/20 dark:border-blue-700/20 hover:scale-[1.03] transition-all duration-500 hover:shadow-glow-lg">
             <div className="flex items-center gap-4 mb-6">
@@ -411,7 +411,7 @@ function App() {
               <p><span className="font-semibold">Location:</span> Mathura, UP</p>
             </div>
           </div>
-          
+
           <div className="glass rounded-3xl shadow-xl p-8 border border-green-200/20 dark:border-green-700/20 hover:scale-[1.03] transition-all duration-500 hover:shadow-glow-lg">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center text-2xl">
@@ -444,7 +444,7 @@ function App() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient-x text-reveal">
             Technical Skills
@@ -452,7 +452,7 @@ function App() {
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto text-reveal" style={{ animationDelay: "0.2s" }}>
             Mastering modern technologies to build exceptional digital experiences
           </p>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-8">
             {Object.entries(skillIcons).map(([skill, icon], index) => (
               <div
@@ -478,7 +478,7 @@ function App() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-100/20 via-pink-100/20 to-rose-100/20 dark:from-purple-900/20 dark:via-pink-900/20 dark:to-rose-900/20"></div>
-        
+
         <div className="container mx-auto relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 bg-clip-text text-transparent animate-gradient-x text-reveal">
             Featured Projects
@@ -486,7 +486,7 @@ function App() {
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto text-reveal" style={{ animationDelay: "0.2s" }}>
             Showcasing innovative solutions and cutting-edge development
           </p>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             {projects.map((project, idx) => (
               <div
@@ -523,7 +523,13 @@ function App() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-primary px-6 py-3 rounded-full text-white font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                      className="
+    px-6 py-3 rounded-full border-2 font-semibold flex items-center gap-2
+    border-blue-500
+    text-blue-600 hover:bg-blue-500 hover:text-white
+    dark:text-white dark:border-blue-400 dark:hover:bg-blue-400 dark:hover:text-black
+    transition-all duration-300
+  "
                     >
                       <span>🌐 Live Demo</span>
                     </a>
@@ -551,7 +557,7 @@ function App() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-100/20 via-teal-100/20 to-cyan-100/20 dark:from-emerald-900/20 dark:via-teal-900/20 dark:to-cyan-900/20"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent animate-gradient-x text-reveal">
             Achievements & Recognition
@@ -559,7 +565,7 @@ function App() {
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto text-reveal" style={{ animationDelay: "0.2s" }}>
             Celebrating milestones and continuous growth in the tech journey
           </p>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="glass rounded-3xl shadow-2xl p-8 border border-emerald-200/20 dark:border-emerald-700/20 hover:scale-[1.02] transition-all duration-500 hover:shadow-glow-lg">
               <div className="flex items-center gap-4 mb-6">
@@ -577,15 +583,15 @@ function App() {
               </div>
               <ul className="list-disc list-inside text-gray-700 dark:text-gray-200 text-lg space-y-2 leading-relaxed">
                 <li>
-                  <span className="font-semibold text-emerald-700 dark:text-emerald-300">300+ Problems Solved:</span> 
+                  <span className="font-semibold text-emerald-700 dark:text-emerald-300">300+ Problems Solved:</span>
                   Mastered algorithms and data structures across various difficulty levels
                 </li>
                 <li>
-                  <span className="font-semibold text-emerald-700 dark:text-emerald-300">1400+ Rating:</span> 
+                  <span className="font-semibold text-emerald-700 dark:text-emerald-300">1400+ Rating:</span>
                   Consistently ranked among top performers in competitive programming
                 </li>
                 <li>
-                  <span className="font-semibold text-emerald-700 dark:text-emerald-300">Daily Practice:</span> 
+                  <span className="font-semibold text-emerald-700 dark:text-emerald-300">Daily Practice:</span>
                   Maintained streak of continuous learning and skill refinement
                 </li>
               </ul>
@@ -595,14 +601,14 @@ function App() {
       </section>
 
       {/* Certifications Section */}
-      <section 
-        id="certifications" 
+      <section
+        id="certifications"
         ref={setSectionRef('certifications')}
         className={`py-20 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-indigo-900 dark:to-gray-950 transition-all duration-700 relative overflow-hidden ${isSectionVisible('certifications') ? 'animate-fade-in-up' : 'opacity-0 translate-y-10'}`}
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/20 via-indigo-100/20 to-purple-100/20 dark:from-blue-900/20 dark:via-indigo-900/20 dark:to-purple-900/20"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x text-reveal">
             Professional Certifications
@@ -610,7 +616,7 @@ function App() {
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto text-reveal" style={{ animationDelay: "0.2s" }}>
             Validating expertise through industry-recognized certifications
           </p>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="glass rounded-3xl shadow-2xl p-8 border border-blue-200/20 dark:border-blue-700/20 hover:scale-[1.03] transition-all duration-500 hover:shadow-glow-lg animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
               <div className="flex items-center gap-4 mb-6">
@@ -643,7 +649,7 @@ function App() {
                 </span>
               </div>
             </div>
-            
+
             <div className="glass rounded-3xl shadow-2xl p-8 border border-indigo-200/20 dark:border-indigo-700/20 hover:scale-[1.03] transition-all duration-500 hover:shadow-glow-lg animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full flex items-center justify-center text-2xl">
@@ -687,7 +693,7 @@ function App() {
       >
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-br from-rose-100/20 via-pink-100/20 to-purple-100/20 dark:from-rose-900/20 dark:via-pink-900/20 dark:to-purple-900/20"></div>
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-center bg-gradient-to-r from-rose-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-gradient-x text-reveal">
             Let's Connect
@@ -695,7 +701,7 @@ function App() {
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto text-reveal" style={{ animationDelay: "0.2s" }}>
             Ready to collaborate on exciting projects? Let's build something amazing together!
           </p>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="glass rounded-3xl shadow-2xl p-8 border border-rose-200/20 dark:border-rose-700/20 hover:scale-[1.02] transition-all duration-500 hover:shadow-glow-lg">
               <div className="text-center mb-8">
@@ -706,7 +712,7 @@ function App() {
                   Feel free to reach out for collaboration, opportunities, or just a friendly hello!
                 </p>
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <a
@@ -721,7 +727,7 @@ function App() {
                       <p className="text-blue-600 dark:text-blue-400">+91 8859883971</p>
                     </div>
                   </a>
-                  
+
                   <a
                     href="mailto:gsujal217@gmail.com"
                     className="flex items-center gap-4 p-4 rounded-2xl bg-white/50 dark:bg-gray-800/50 hover:bg-white/80 dark:hover:bg-gray-800/80 transition-all duration-300 hover:scale-105 border border-rose-200/30 dark:border-rose-700/30"
@@ -735,7 +741,7 @@ function App() {
                     </div>
                   </a>
                 </div>
-                
+
                 <div className="space-y-4">
                   <a
                     href="https://www.linkedin.com/in/sujal-gupta-343543252/"
@@ -753,7 +759,7 @@ function App() {
                       <p className="text-blue-600 dark:text-blue-400">Connect with me</p>
                     </div>
                   </a>
-                  
+
                   <a
                     href="https://github.com/guptasujal07"
                     target="_blank"
@@ -770,7 +776,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="mt-8 text-center">
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   Available for freelance opportunities and full-time positions
@@ -785,7 +791,7 @@ function App() {
       <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 dark:from-black dark:via-blue-950 dark:to-black text-gray-200 dark:text-gray-400 py-8 text-center transition-all duration-500 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-purple-500/5 to-pink-500/5"></div>
-        
+
         <div className="relative z-10">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
@@ -797,7 +803,7 @@ function App() {
                   Full Stack Developer & Problem Solver
                 </p>
               </div>
-              
+
               <div className="flex gap-6">
                 <a
                   href="https://github.com/guptasujal07"
@@ -825,10 +831,10 @@ function App() {
                 </a>
               </div>
             </div>
-            
+
             <div className="border-t border-gray-700/50 pt-6">
               <p className="text-sm text-gray-400 dark:text-gray-500">
-                &copy; {new Date().getFullYear()} Sujal Gupta. All rights reserved. 
+                &copy; {new Date().getFullYear()} Sujal Gupta. All rights reserved.
                 <span className="block mt-1">Crafted with ❤️ and modern web technologies</span>
               </p>
             </div>
